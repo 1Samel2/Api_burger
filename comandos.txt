@@ -3,3 +3,5 @@ docker run --name codeburger -e POSTGRES_PASSWORD=senha -p 5432:5432 -d postgres
 para iniciar o servidor do docker > docker start nome do container
 
 docker ps para olhar se está ativo
+
+yarn sequelize db:migrate para rodar a tabela
