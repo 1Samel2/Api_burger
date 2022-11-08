@@ -5,3 +5,5 @@ para iniciar o servidor do docker > docker start nome do container
 docker ps para olhar se está ativo
 
 yarn sequelize db:migrate para rodar a tabela
+
+yarn sequelize db:migrate:undo:ll desfazer todas migrate
