@@ -1,5 +1,6 @@
 import * as Yup from 'yup'
 
+
 class ProductController {
     async store(request, response) {
         const schema = Yup.object().shape({
