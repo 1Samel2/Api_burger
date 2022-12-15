@@ -1,4 +1,4 @@
-docker run --name codeburger -e POSTGRES_PASSWORD=senha -p 5432:5432 -d postgres
+docker run --name codeburger -e POSTGRES_PASSWORD=senha -p 5432:5432 -d postgres => create a container
 
 para iniciar o servidor do docker > docker start nome do container
 

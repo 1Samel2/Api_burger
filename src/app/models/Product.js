@@ -8,9 +8,9 @@ class Product extends Model {
                 price: Sequelize.INTEGER,
                 category: Sequelize.STRING,
                 path: Sequelize.STRING,
-                url:{
+                url: {
                     type: Sequelize.VIRTUAL,
-                    get(){
+                    get() {
                         return `http://localhost:3001/product-file/${this.path}`
                     },
                 },
