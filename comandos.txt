@@ -1,5 +1,7 @@
 docker run --name codeburger -e POSTGRES_PASSWORD=senha -p 5432:5432 -d postgres => create a container
 
+docker run --name mongo -p 27017:27017 -d -t mongo
+
 para iniciar o servidor do docker > docker start nome do container
 
 docker ps para olhar se está ativo
