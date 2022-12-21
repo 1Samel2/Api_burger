@@ -1,5 +1,6 @@
-import Sequelize, { Model } from "sequelize";
+import Sequelize, { Model } from 'sequelize'
 import bcrypt from 'bcrypt'
+
 class User extends Model {
   static init(sequelize) {
     super.init(
@@ -13,7 +14,7 @@ class User extends Model {
       {
         sequelize,
       }
-    );
+    )
 
     this.addHook('beforeSave', async (user) => {
       if (user.password) {
@@ -29,4 +30,4 @@ class User extends Model {
   }
 }
 
-export default User;
+export default User

@@ -1,4 +1,4 @@
-import Jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 import authConfig from '../../config/auth'
 
 export default (request, response, next) => {
@@ -9,8 +9,9 @@ export default (request, response, next) => {
   }
 
   const token = authToken.split(' ')[1]
+
   try {
-    Jwt.verify(token, authConfig.secret, function (err, decoded) {
+    jwt.verify(token, authConfig.secret, function (err, decoded) {
       if (err) {
         throw new Error()
       }

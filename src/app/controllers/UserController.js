@@ -1,5 +1,6 @@
 import { v4 } from 'uuid'
 import * as Yup from 'yup'
+
 import User from '../models/User'
 
 class UserController {
@@ -19,12 +20,12 @@ class UserController {
 
     const { name, email, password, admin } = request.body
 
-    const userExist = await User.findOne({
+    const userExists = await User.findOne({
       where: { email },
     })
 
-    if (userExist) {
-      return response.status(400).json({ error: 'User already exists' })
+    if (userExists) {
+      return response.status(409).json({ error: 'User already exists' })
     }
 
     const user = await User.create({
@@ -35,7 +36,7 @@ class UserController {
       admin,
     })
 
-    return response.json(user)
+    return response.status(201).json({ id: user.id, name, email, admin })
   }
 }
 
