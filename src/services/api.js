@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const apiCodeBurger = axios.create({
-    baseURL:'http://localhost:3001'
+    baseURL:'apiburger-production.up.railway.app'
 })
